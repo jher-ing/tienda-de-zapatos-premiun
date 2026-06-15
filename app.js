@@ -452,7 +452,17 @@ function renderFeaturedCatalog() {
 
 // --- DYNAMIC LOOKBOOK PRODUCT CAROUSEL ---
 let currentSlideIndex = 0;
-const slideWidth = 460; // card min-width + gap (420px + 40px)
+
+function getSlideWidth() {
+  const slide = document.querySelector('.product-slide');
+  if (slide) {
+    const slider = document.getElementById('product-slider');
+    const style = window.getComputedStyle(slider);
+    const gap = parseFloat(style.gap) || 0;
+    return slide.getBoundingClientRect().width + gap;
+  }
+  return 460; // fallback
+}
 
 function renderLookbookProducts() {
   const slider = document.getElementById('product-slider');
@@ -502,7 +512,8 @@ function updateSliderControls() {
   if (!slider || !prevBtn || !nextBtn) return;
   
   const totalSlides = products.length;
-  const maxSlides = totalSlides - Math.floor(slider.parentElement.clientWidth / slideWidth);
+  const currentSlideWidth = getSlideWidth();
+  const maxSlides = Math.max(0, totalSlides - Math.round(slider.parentElement.clientWidth / currentSlideWidth));
   
   prevBtn.onclick = () => {
     currentSlideIndex--;
@@ -521,7 +532,8 @@ function slideSlider() {
   const slider = document.getElementById('product-slider');
   if (!slider) return;
   
-  const translationValue = -currentSlideIndex * slideWidth;
+  const currentSlideWidth = getSlideWidth();
+  const translationValue = -currentSlideIndex * currentSlideWidth;
   slider.style.transform = `translateX(${translationValue}px)`;
 }
 
