@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KINETIC // Streetwear & Sneaker Luxury Archive</title>
+  <meta name="description" content="KINETIC - Colección exclusiva de sneakers de edición limitada y streetwear de lujo. No sigas tendencias. Créalas.">
+  <link rel="stylesheet" href="style.css?v=1.2">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Noise Overlay for Concrete Aesthetics -->
+  <div class="noise-overlay"></div>
+
+  <!-- GLITCH PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo" id="preloader-logo">KINETIC</div>
+    <div class="preloader-bar">
+      <div class="preloader-progress" id="preloader-progress"></div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <a href="#" class="logo">KINETIC<span>.</span></a>
+    <nav>
+      <a href="#catalog">Catálogo</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#story">Campaña</a>
+      <a href="#drops">Drops</a>
+      <a href="#community">Comunidad</a>
+    </nav>
+    <div class="nav-icons">
+      <button class="nav-icon" id="search-toggle" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="nav-icon" id="cart-toggle" aria-label="Carrito">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-media"></div>
+    <div class="hero-concrete-backdrop" style="background-image: url('assets/templade base.avif');"></div>
+    <div class="hero-glowing-orbs"></div>
+    
+    <!-- LEFT: Text Content -->
+    <div class="hero-content">
+      <span class="hero-tag">DROP 01 // ARCHIVE EXCLUSIVE</span>
+      <h1 class="hero-title">
+        NO SIGAS<br>
+        TENDENCIAS.<br>
+        <span>CRÉALAS.</span>
+      </h1>
+      <div class="hero-cta">
+        <a href="#lookbook" class="btn-premium"><span>EXPLORAR ARCHIVO</span></a>
+      </div>
+    </div>
+
+    <!-- RIGHT: 3D Floating Sneaker -->
+    <div class="hero-sneaker-container" id="hero-sneaker-wrap">
+      <img src="assets/photo-1460353581641-37baddab0fa2.avif" alt="Kinetic Vapor Pro" class="hero-sneaker-img" id="hero-sneaker">
+    </div>
+  </section>
+
+  <!-- CATALOG / FEATURED GALLERY SECTION -->
+  <section class="catalog" id="catalog">
+    <span class="section-label">01 // DESTACADOS</span>
+    <h2 class="section-title-editorial">GALERÍA DE ESTILO <span>CATÁLOGO EXCLUSIVO</span></h2>
+    
+    <div class="catalog-grid" id="featured-catalog-grid">
+      <!-- Will be rendered dynamically by app.js (max 6 items) -->
+    </div>
+  </section>
+
+  <!-- FEATURED LOOKBOOK CAROUSEL -->
+  <section class="featured-lookbook" id="lookbook">
+    <div class="lookbook-header">
+      <div>
+        <span class="section-label">02 // ARCHIVO KINETIC</span>
+        <h2 class="section-title-editorial">CARRUSEL DE DROPS <span>LOOKBOOK TEMPORADA 2026</span></h2>
+      </div>
+      <div class="lookbook-controls">
+        <button class="btn-ctrl" id="slide-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="btn-ctrl" id="slide-next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <!-- Product Slider Container -->
+    <div class="lookbook-slider-wrapper">
+      <div class="lookbook-slider" id="product-slider">
+        <!-- Products will be generated dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STORYTELLING SECTION -->
+  <section class="storytelling" id="story">
+    <div class="storytelling-media">
+      <img src="assets/photo-1679800558771-0e1737f489c0.avif" alt="Streetwear Campaign Background" class="storytelling-backdrop-img">
+    </div>
+    
+    <div class="storytelling-content">
+      <div class="story-text-container">
+        <span class="section-label">03 // DISEÑO & ESTRUCTURA</span>
+        <h2 class="story-heading">FUSIONAMOS<br><span>TECNOLOGÍA Y ARTE</span></h2>
+        <p class="story-body">
+          Nuestras siluetas son el resultado de la intersección entre la funcionalidad atlética extrema y la estética de vanguardia. Cada par se ensambla utilizando procesos sostenibles, materiales técnicos resistentes al agua y texturas inspiradas en la arquitectura brutalista.
+        </p>
+        <button class="btn-premium"><span>LEER MANIFIESTO</span></button>
+      </div>
+      
+      <div class="story-detail-box">
+        <div>
+          <h3 class="story-detail-title">Materiales Nobles</h3>
+          <p class="story-detail-desc">Cuero de plena flor curtido al cromo e hilos de polímero reciclado que incrementan la resistencia mecánica y la transpirabilidad.</p>
+        </div>
+        <div>
+          <h3 class="story-detail-title">Amortiguación Dual</h3>
+          <p class="story-detail-desc">La entresuela cuenta con un núcleo de espuma termo-inyectada para un retorno de energía superior en entornos de asfalto y concreto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXCLUSIVE DROP (COUNTDOWN) -->
+  <section class="drops" id="drops">
+    <span class="section-label">04 // EXCLUSIVO</span>
+    <h2 class="section-title-editorial">LANZAMIENTOS URBANOS <span>EDICIONES DE COLECCIÓN</span></h2>
+    
+    <div class="drop-card">
+      <div class="drop-media">
+        <img src="assets/photo-1512374382149-233c42b6a83b.avif" alt="Kinetic Neon Drop" class="drop-sneaker-img">
+      </div>
+      <div class="drop-info">
+        <span class="drop-status"><i class="fa-solid fa-fire-flame-curved"></i> DROP INMINENTE</span>
+        <h3 class="drop-title">NEON VAPOR-X "CARBON"</h3>
+        <p class="drop-description">
+          Construido sobre una suela de goma traslúcida moldeada al vacío, el NEON VAPOR-X fusiona paneles de nylon técnico balístico Ripstop con micro-gamuza. Un drop limitado a 100 unidades en todo el mundo.
+        </p>
+        
+        <div class="countdown-container" id="drop-countdown" data-time="2026-06-25T18:00:00">
+          <div class="countdown-segment">
+            <span class="countdown-number" id="cd-days">12<span>d</span></span>
+            <span class="countdown-label">Días</span>
+          </div>
+          <div class="countdown-segment">
+            <span class="countdown-number" id="cd-hours">08<span>h</span></span>
+            <span class="countdown-label">Horas</span>
+          </div>
+          <div class="countdown-segment">
+            <span class="countdown-number" id="cd-mins">45<span>m</span></span>
+            <span class="countdown-label">Minutos</span>
+          </div>
+          <div class="countdown-segment">
+            <span class="countdown-number" id="cd-secs">12<span>s</span></span>
+            <span class="countdown-label">Segundos</span>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn-premium" id="notify-drop"><span>NOTIFICARME AL DROP</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY FEED -->
+  <section class="community" id="community">
+    <span class="section-label">05 // COMUNIDAD</span>
+    <h2 class="section-title-editorial">CULTURA CALLEJERA <span>#KINETICSTREETS</span></h2>
+
+    <div class="community-masonry">
+      <div class="masonry-item masonry-h-large">
+        <img src="assets/photo-1579446650032-86effeeb3389.avif" alt="Street style model 1">
+        <div class="masonry-overlay">
+          <span>@KINETIC_CORP // MILÁN</span>
+        </div>
+      </div>
+      <div class="masonry-item masonry-h-medium">
+        <img src="assets/photo-1584735175315-9d5df23860e6.avif" alt="Street style model 2">
+        <div class="masonry-overlay">
+          <span>@TOKYO_DRIFT88 // SHIBUYA</span>
+        </div>
+      </div>
+      <div class="masonry-item masonry-h-medium">
+        <img src="assets/photo-1586525198428-225f6f12cff5.avif" alt="Street style model 3">
+        <div class="masonry-overlay">
+          <span>@GRAFFITI_ARCHIVE // NYC</span>
+        </div>
+      </div>
+      <div class="masonry-item masonry-h-large">
+        <img src="assets/photo-1595341888016-a392ef81b7de.avif" alt="Street style model 4">
+        <div class="masonry-overlay">
+          <span>@STREETWEAR_HQ // BERLÍN</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand-column">
+        <a href="#" class="footer-logo">KINETIC<span>.</span></a>
+        <p class="footer-desc">
+          Firma global de calzado conceptual urbano y streetwear técnico. Arquitectura y tecnología fusionadas para el asfalto.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-title">EXPLORAR</h4>
+        <div class="footer-links">
+          <a href="#catalog">Catálogo</a>
+          <a href="#lookbook">Lanzamientos</a>
+          <a href="#story">El Manifiesto</a>
+          <a href="#drops">Drops Exclusivos</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-title">ASISTENCIA</h4>
+        <div class="footer-links">
+          <a href="#">Seguimiento de Drops</a>
+          <a href="#">Envíos de Seguridad</a>
+          <a href="#">Devoluciones</a>
+          <a href="#">Canal Discord</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-title">COMUNICACIONES</h4>
+        <div class="footer-links">
+          <a href="#">Terminos & Registro</a>
+          <a href="#">Políticas del Archivo</a>
+          <a href="#">Políticas de Cookies</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span class="footer-copyright">&copy; 2026 KINETIC ARCHIVE LAB. TODOS LOS DERECHOS RESERVADOS.</span>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="footer-social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="footer-social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="footer-social-link" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- OVERLAY BACKDROP -->
+  <div class="overlay-backdrop" id="overlay-backdrop"></div>
+
+  <!-- SLIDING SHOPPING CART DRAWER -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3 class="cart-title">Tu Archivo (<span id="cart-drawer-count">0</span>)</h3>
+      <button class="cart-close" id="cart-close" aria-label="Cerrar carrito"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    
+    <div class="cart-items-container" id="cart-items-list">
+      <!-- Generated dynamically by app.js -->
+    </div>
+    
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span class="cart-total-label">Subtotal</span>
+        <span class="cart-total-value" id="cart-subtotal">$0.00</span>
+      </div>
+      <button class="btn-premium btn-checkout" id="cart-checkout"><span>PROCEDER AL CHECKOUT</span></button>
+    </div>
+  </div>
+
+  <!-- DETAILED PRODUCT MODAL -->
+  <div class="product-modal" id="product-modal">
+    <button class="modal-close" id="modal-close" aria-label="Cerrar detalles del producto"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-media">
+      <img id="modal-img" src="" alt="">
+    </div>
+    <div class="modal-info">
+      <span class="modal-category" id="modal-cat">CATEGORÍA</span>
+      <h3 class="modal-title" id="modal-title">PRODUCTO TITULO</h3>
+      <div class="modal-price" id="modal-price">$0.00</div>
+      <p class="modal-desc" id="modal-desc">Descripción detallada del producto.</p>
+      
+      <h4 class="modal-options-title">SELECCIONAR TALLA (US)</h4>
+      <div class="modal-sizes" id="modal-sizes-box">
+        <button class="size-btn">8</button>
+        <button class="size-btn active">9</button>
+        <button class="size-btn">10</button>
+        <button class="size-btn">11</button>
+        <button class="size-btn">12</button>
+      </div>
+
+      <button class="btn-premium" id="modal-add-to-cart"><span>AÑADIR AL ARCHIVO</span></button>
+    </div>
+  </div>
+
+  <!-- GSAP Animation Libraries via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="app.js?v=1.2"></script>
+</body>
+</html>
